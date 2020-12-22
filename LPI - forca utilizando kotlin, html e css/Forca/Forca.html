@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Jogo da Forca</title>
+    <style>
+        body {background-color: powderblue;}
+        h1   {color: black;}
+        p    {color: green;}
+        button  {background-color : green; color: white;}
+    </style>
+
+</head>
+
+<body>
+
+<div id="paginaInicial">
+    <center>
+        <h1>Jogo da Forca</h1>
+    </center>
+    <center>
+   <img src="imagens/logoPOLI.gif" alt="Poli.png">
+    <img src="imagens/Forca.gif" alt="Forca.png" > <br/>
+    <!-- <img sbrc="imagens/IMGforca1.jpg" alt = "IMGForca.png" style="width:210px;height:188px;">> <br/> -->
+    </center>
+    <p>
+
+    <div id="botoes">
+        <center>
+            <button id = "jogar" onclick="Forca.clicouJogar()" >Jogar</button><br/>
+            <button onclick="window.close();">Sair</button><br/>
+        </center>
+    </div>
+
+    </div>
+<div id="imagensInicial" style="display: block">
+    <center>
+
+    </center>
+</div>
+    <center>
+        <div id="titulo" style="display:none">
+
+        </div>
+    </center>
+<br><br>
+<div id="letras" style="display:none">
+    <center>
+
+        <button style ="background-color: blue" id="a" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'a');">A</button>
+        <button style ="background-color: blue" id="b" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'b');">B</button>
+        <button style ="background-color: blue" id="c" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'c');">C</button>
+        <button style ="background-color: blue" id="d" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'd');">D</button>
+        <button style ="background-color: blue" id="e" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'e');">E</button>
+        <button style ="background-color: blue" id="f" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'f');">F</button>
+        <button style ="background-color: blue" id="g" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'g');">G</button>
+        <p>
+            <button style ="background-color: blue" id="h" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'h');">H</button>
+            <button style ="background-color: blue" id="i" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'i');">I</button>
+            <button style ="background-color: blue" id="j" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'j');">J</button>
+            <button style ="background-color: blue" id="k" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'k');">K</button>
+            <button style ="background-color: blue" id="l" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'l');">L</button>
+            <button style ="background-color: blue" id="m" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'm');">M</button>
+            <button style ="background-color: blue" id="n" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'n');">N</button>
+        <p>
+            <button style ="background-color: blue" id="o" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'o');">O</button>
+            <button style ="background-color: blue" id="p" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'p');">P</button>
+            <button style ="background-color: blue" id="q" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'q');">Q</button>
+            <button style ="background-color: blue" id="r" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'r');">R</button>
+            <button style ="background-color: blue" id="s" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 's');">S</button>
+            <button style ="background-color: blue" id="t" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 't');">T</button>
+            <button style ="background-color: blue" id="u" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'u');">U</button>
+        <p>
+            <button style ="background-color: blue" id="v" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'v');">V</button>
+            <button style ="background-color: blue" id="w" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'w');">W</button>
+            <button style ="background-color: blue" id="x" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'x');">X</button>
+            <button style ="background-color: blue" id="y" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'y');">Y</button>
+            <button style ="background-color: blue" id="z" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'z');">Z</button>
+            <button style ="background-color: blue" id="ç" onclick = "Forca.clicouLetra(Forca.sortearDicasAndNomes(), 'ç');">Ç</button>
+        <p>
+            <button style ="background-color: blue" id="Voltar" onclick = "Forca.clicouVoltar()">Voltar</button>
+        <div id="imagensFORCA"style="display: none">
+        </div>
+    </center>
+</div>
+
+<script src="out/production/Forca/lib/kotlin.js"></script>
+<script src ="out/production/Forca/Forca.js"></script>
+</body>
+
+</html>
