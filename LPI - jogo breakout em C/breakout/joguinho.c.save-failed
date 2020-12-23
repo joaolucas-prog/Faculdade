@@ -1,0 +1,138 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<conio.h>
+#include<windows.h>
+#include"menu.h"
+#include"ranking.c"
+int xbarra=14,ybarra=27 ,xbola=25,ybola =26,direcaox=1,direcaoy=(-1),vidas=5,yborda=28,borda = 219,score=0;
+unsigned char barra=178,muv,tab[28][50];
+void hidecursor()
+{
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_CURSOR_INFO info;
+    info.dwSize = 100;
+    info.bVisible = FALSE;
+    SetConsoleCursorInfo(consoleHandle, &info);
+}
+void gotoxy(int x, int y){
+     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),(COORD){x-1,y-1});
+}
+void _borda(){
+ char bordas=219 ,coluna,linha,lado=28;
+
+    for(linha=0;linha<lado;linha++){//aqui dizemos quantas vezes faremos cada linha
+    for(coluna=0;coluna<51;coluna++){//aqui imprimimos asteriscos lado a lado equivalentes ao tamanho do lado
+            //que multiplicados pelo numero de vezes definido no primeiro for
+            //faz com que obtenhamos um quadrilatero
+        if(linha==0 || linha==lado-1 || coluna==0 || coluna==lado+22){
+                //linha==0 imprime a barra de cima
+                //linha==lado+1 imprime a barra de baixo
+                //coluna==0 imprime a barra da esquerda
+                //coluna==lado+1 imprime a barra da direita
+                tab[coluna][linha]=bordas;
+                printf("%c",tab[coluna][linha]);
+
+            }
+
+        else if(linha>=1 && linha<=4 && coluna>=1 && coluna<=50)
+            {
+                tab[coluna][linha] = 177;
+
+                printf("%c",tab[coluna][linha]);
+            }
+
+        else{
+                //em todo o resto ? imprimido espa?o vazio
+                tab[coluna][linha] = 0;
+                printf("%c",tab[coluna][linha]);
+
+            }
+        }
+        printf("\n");
+    }
+}
+void jogo(){
+    hidecursor();
+    system("mode con:cols=120 lines=39");
+    _borda();
+    while (vidas){
+
+    gotoxy(xbarra,ybarra);printf ("%c%c%c%c%c%c%c",barra,barra,barra,barra,barra,barra,barra);
+    gotoxy(60,10);printf(" Vidas:%d",vidas);
+    gotoxy(60,12);printf(" Score:%d",score);
+
+    if (kbhit())
+        {
+        muv = getch(); //recebe a tecla
+        }
+        _sleep(70);
+    if(muv == 75 && xbarra>2){
+        xbarra=xbarra-2;
+        muv=0;
+        gotoxy(xbarra+6,ybarra);
+        printf("   ");
+             }
+    else if(muv == 77&& xbarra<43){
+        xbarra=xbarra+2;
+        muv=0;
+        gotoxy(xbarra-2,ybarra);
+        printf("   ");
+              }
+    gotoxy(xbola,ybola);printf(" ");
+
+
+    if ( xbola==2)
+        direcaox=1;
+    else if(xbola==50)
+        direcaox=(-1);
+    else if(ybola==2)
+        direcaoy=1;
+    else if(ybola==27)
+        direcaoy=(-1);
+
+    xbola+=direcaox;
+    ybola+=direcaoy;
+    gotoxy(xbola,ybola);printf("O");
+
+    if ((xbarra!=xbola && xbarra+1!=xbola && xbarra+2!=xbola && xbarra+3!=xbola && xbarra+4!=xbola&& xbarra+5!=xbola&&xbarra+6!=xbola)&&ybarra==ybola)
+        vidas--;
+    else if ((xbarra==xbola || xbarra+1==xbola || xbarra+2==xbola )&&ybarra==ybola)
+ {
+        direcaox=(-1);
+        direcaoy=(-1);
+ }
+    else if ((xbarra+3==xbola || xbarra+4==xbola || xbarra+5==xbola || xbarra+6==xbola )&&ybarra==ybola && ybarra==ybola && direcaox==(-1) )
+ {
+        direcaox=(1);
+        direcaoy=(-1);
+ }
+   if(tab[xbola][ybola-1]==177 && direcaoy==(-1)&&  direcaox==1){
+        tab[xbola][ybola-1]=0;
+        gotoxy(xbola+1,ybola);printf(" ");
+        direcaoy=(1);
+        direcaox= (-1);
+        score=score+10;
+
+        }
+    else if(tab[xbola][ybola-1]==177 && direcaoy==(-1)&& direcaox==(-1) ){
+        tab[xbola][ybola-1]=0;
+        gotoxy(xbola+1,ybola);printf(" ");
+        direcaoy=(1);
+        direcaox=1;
+        score=score+10;
+
+    }
+    else if(tab[xbola][ybola-1]==177 && direcaoy==1){
+        tab[xbola][ybola-1]=0;
+        gotoxy(xbola+1,ybola);printf(" ");
+        direcaoy=(-1);
+        score=score+10;
+
+    }
+ranking();
+     }
+
+      //printf("deseja voltar pro menu? sim-1 nao-2\n");
+      //scanf("%d",muv);
+      return 0;
+}

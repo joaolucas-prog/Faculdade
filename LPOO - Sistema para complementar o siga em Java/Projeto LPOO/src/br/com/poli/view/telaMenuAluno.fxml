@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.poli.view.ControllerTelaMenuAluno">
+   <children>
+      <ImageView blendMode="MULTIPLY" fitHeight="150.0" fitWidth="200.0" layoutX="368.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/upe.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="83.0" layoutX="87.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/adicionar-botao-circular_318-70661.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="255.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/Agenda-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="78.0" layoutX="430.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/activity-grid-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgLogOut" fitHeight="26.0" fitWidth="23.0" layoutX="129.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/log%20out.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="7.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/588a6758d06f6719692a2d22.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="42.0" layoutY="15.0" text="Home" />
+      <Hyperlink fx:id="btnLogOut" layoutX="151.0" layoutY="15.0" onAction="#clickBotaoHome" text="LogOut" />
+      <Hyperlink fx:id="lnkFzrMatricula" layoutX="83.0" layoutY="257.0" onAction="#fazerMatricula" text="Fazer Matricula " />
+      <Hyperlink fx:id="lnkIntencaoMatricula" layoutX="236.0" layoutY="257.0" text="Intenções de Matricula" />
+      <Hyperlink fx:id="lnkGradeDeHorario" layoutX="417.0" layoutY="257.0" onAction="#clickGradeDeHorario" text="Grade de Horário " />
+      <Label id="lblNomeAluno" fx:id="lblNomeAluno" layoutX="111.0" layoutY="56.0">
+         <padding>
+            <Insets right="200.0" />
+         </padding>
+      </Label>
+      <Label fx:id="lblCpfAluno" layoutX="111.0" layoutY="72.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="200.0" />
+         </padding>
+      </Label>
+      <Label layoutX="63.0" layoutY="54.0" text="Nome: ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="71.0" text="CPF:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

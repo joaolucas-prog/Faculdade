@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1511477682 source:c:\users\joao_\desktop\faculdade\bolinha 2.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"menu.c"
+	"joguinho.c"
+
+1511477627 c:\users\joao_\desktop\faculdade\bolinha 2.0\menu.h
+
+1511477627 c:\users\joao_\desktop\faculdade\bolinha 2.0\joguinho.h
+
+1511477994 c:\users\joao_\desktop\faculdade\bolinha 2.0\menu.c
+	<stdio.h>
+	<stdlib.h>
+
+1511748993 c:\users\joao_\desktop\faculdade\bolinha 2.0\joguinho.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+
+1511474082 source:c:\users\aluno\desktop\bolinha 2.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"menu.c"
+	"joguinho.c"
+
+1511474394 c:\users\aluno\desktop\bolinha 2.0\menu.c
+	<stdio.h>
+	<stdlib.h>
+
+1511796444 c:\users\aluno\desktop\bolinha 2.0\joguinho.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+
+1511474027 c:\users\aluno\desktop\bolinha 2.0\menu.h
+
+1512007637 source:c:\users\joao_\desktop\bolinha 2.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"menu.c"
+	"joguinho.c"
+
+1512007644 c:\users\joao_\desktop\bolinha 2.0\menu.c
+	<stdio.h>
+	<stdlib.h>
+
+1512339269 c:\users\joao_\desktop\bolinha 2.0\joguinho.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"menu.h"
+
+1511926430 c:\users\joao_\desktop\bolinha 2.0\menu.h
+

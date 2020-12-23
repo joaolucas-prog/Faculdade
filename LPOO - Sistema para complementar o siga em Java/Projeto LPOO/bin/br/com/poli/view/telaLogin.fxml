@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.poli.view.ControllerTelaLogin">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TextField fx:id="txtLogin" layoutX="230.0" layoutY="165.0" promptText="Login" />
+            <PasswordField fx:id="txtSenha" layoutX="230.0" layoutY="201.0" promptText="Senha" />
+            <Button fx:id="bntLogin" layoutX="275.0" layoutY="276.0" mnemonicParsing="false" onAction="#clickBotaoEntrar" text="Entrar" />
+            <Hyperlink fx:id="linkPrimeiroAcesso" layoutX="251.0" layoutY="340.0" onAction="#clicklnkPrimeiroAcesso" onKeyPressed="#clicklnkPrimeiroAcesso" text="Primeiro Acesso" />
+            <ImageView blendMode="MULTIPLY" fitHeight="96.0" fitWidth="268.0" layoutX="172.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Imagens%20Interface/upe.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblInvalido" alignment="CENTER" layoutX="229.0" layoutY="244.0" opacity="0.76" prefHeight="20.0" prefWidth="149.0" text="Login ou senha inválida" textAlignment="CENTER" textFill="#f21717" visible="false" AnchorPane.leftAnchor="229.0">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

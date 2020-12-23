@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.poli.view.ControllerTelaMenuCoordenador">
+   <children>
+      <ImageView fx:id="imgpoli" blendMode="MULTIPLY" fitHeight="150.0" fitWidth="200.0" layoutX="366.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/upe.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgAluno" fitHeight="110.0" fitWidth="110.0" layoutX="63.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/img%20aluno.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgDisci" fitHeight="127.0" fitWidth="110.0" layoutX="430.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/img%20disci.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgProfessor" blendMode="MULTIPLY" fitHeight="100.0" fitWidth="110.0" layoutX="250.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagens%20Interface/img%20prof.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="54.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coordenador">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Text>
+      <SplitMenuButton layoutX="61.0" layoutY="255.0" mnemonicParsing="false" text="Opções Aluno">
+        <items>
+          <MenuItem fx:id="btnAddAluno" mnemonicParsing="false" onAction="#clickbtnAddAluno" text="Adicionar Aluno" />
+          <MenuItem fx:id="btnEditarAluno" mnemonicParsing="false" onAction="#clickbtnEditarAluno" text="Editar aluno" />
+            <MenuItem fx:id="btnExcluirAluno" mnemonicParsing="false" onAction="#clickbtnExcluirAluno" text="Excluir Aluno" />
+            <MenuItem fx:id="btnBuscarAluno" mnemonicParsing="false" onAction="#clickbtnBuscarAluno" text="Buscar Aluno" />
+        </items>
+      </SplitMenuButton>
+      <SplitMenuButton layoutX="235.0" layoutY="255.0" mnemonicParsing="false" text="Opções Professor">
+        <items>
+          <MenuItem fx:id="btnAddProfessor" mnemonicParsing="false" onAction="#clickbtnAddProfessor" text="Adicionar Professor" />
+          <MenuItem fx:id="btnEditarProfessor" mnemonicParsing="false" onAction="#clickbtnEditarProfessor" text="Editar Professor" />
+            <MenuItem fx:id="btnExcluirProfessor" mnemonicParsing="false" onAction="#clickbtnExcluirProfessor" text="Excluir Professor" />
+            <MenuItem fx:id="btnBuscarProfessor" mnemonicParsing="false" onAction="#clickbtnBuscarProfessor" text="Buscar Professor" />
+        </items>
+      </SplitMenuButton>
+      <SplitMenuButton layoutX="410.0" layoutY="255.0" mnemonicParsing="false" text="Opções Disciplina">
+        <items>
+          <MenuItem fx:id="btnAddDisciplina" mnemonicParsing="false" onAction="#clickbtnAddDisciplina" text="Adicionar Disciplina" />
+          <MenuItem fx:id="btnEditarDisciplina" mnemonicParsing="false" onAction="#clickbtnEditarDisciplina" text="Editar Disciplina" />
+            <MenuItem fx:id="btnExcluirDisciplina" mnemonicParsing="false" onAction="#clickbtnExcluirDisciplina" text="Excluir Disciplina" />
+            <MenuItem fx:id="btnBuscarDisciplina" mnemonicParsing="false" onAction="#clickbtnBuscarDisciplina" text="Buscar Disciplina" />
+        </items>
+      </SplitMenuButton>
+      <Hyperlink fx:id="lnkVoltar" layoutX="546.0" layoutY="364.0" onAction="#clicklnkVoltar" onMouseClicked="#clicklnkVoltar" text="Voltar" />
+   </children>
+</AnchorPane>
